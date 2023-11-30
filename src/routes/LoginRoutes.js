@@ -2,7 +2,11 @@ import { lazy } from 'react';
 
 // project import
 import Loadable from 'components/Loadable';
+import Product from '../pages/Product/Product'
+import Map from '../pages/mapview/Map';
 import MinimalLayout from 'layout/MinimalLayout';
+import DataSubscriptionPage from 'pages/DataSubcriptionPage/DataSubcriptionPage';
+import UserSettings from 'pages/UserSettings/UserSettingsPage';
 
 // render - login
 const AuthLogin = Loadable(lazy(() => import('pages/authentication/Login')));
@@ -21,6 +25,18 @@ const LoginRoutes = {
     {
       path: 'register',
       element: <AuthRegister />
+    },
+    {
+      path: 'Product',
+      element: <Product/>
+    },
+    {
+      path: 'DataSubscription',
+      element: <DataSubscriptionPage/>
+    },
+    {
+      path: 'UserSettings',
+      element: <UserSettings/>
     }
   ]
 };
